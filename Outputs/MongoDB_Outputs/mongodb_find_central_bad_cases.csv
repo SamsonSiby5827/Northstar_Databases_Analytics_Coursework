@@ -1,0 +1,11 @@
+_id,service_type,priority_level,zones,delivery,analytics
+O00007,Business,Low,"{'pickup': 'Central', 'dropoff': 'Airport'}","{'delivery_status': 'Delayed', 'customer_rating_post_delivery': 3.93, 'completion_hours_clean': 8.921543125}",{'complaint_count': 1}
+O00059,Passenger,Medium,"{'pickup': 'Central', 'dropoff': 'Airport'}","{'delivery_status': 'Delayed', 'customer_rating_post_delivery': 3.32, 'completion_hours_clean': None}",{'complaint_count': 0}
+O00070,Retail,Low,"{'pickup': 'Central', 'dropoff': 'Airport'}","{'delivery_status': 'Failed', 'customer_rating_post_delivery': 2.14, 'completion_hours_clean': 16.55390397277778}",{'complaint_count': 0}
+O00073,Passenger,High,"{'pickup': 'Central', 'dropoff': 'South'}","{'delivery_status': 'Delayed', 'customer_rating_post_delivery': 2.29, 'completion_hours_clean': 19.85976612027778}",{'complaint_count': 1}
+O00076,Retail,Low,"{'pickup': 'Central', 'dropoff': 'Riverside'}","{'delivery_status': 'Delayed', 'customer_rating_post_delivery': 2.71, 'completion_hours_clean': 9.77850274138889}",{'complaint_count': 0}
+O00129,Retail,High,"{'pickup': 'Central', 'dropoff': 'North'}","{'delivery_status': 'Failed', 'customer_rating_post_delivery': 2.59, 'completion_hours_clean': 29.183911323611117}",{'complaint_count': 1}
+O00132,Passenger,Medium,"{'pickup': 'Central', 'dropoff': 'Central'}","{'delivery_status': 'Delayed', 'customer_rating_post_delivery': 3.52, 'completion_hours_clean': 12.797080998333334}",{'complaint_count': 0}
+O00142,Retail,High,"{'pickup': 'Central', 'dropoff': 'Airport'}","{'delivery_status': 'Failed', 'customer_rating_post_delivery': 1.0, 'completion_hours_clean': 15.174033225277778}",{'complaint_count': 0}
+O00158,Business,High,"{'pickup': 'Central', 'dropoff': 'West'}","{'delivery_status': 'Failed', 'customer_rating_post_delivery': 2.77, 'completion_hours_clean': 28.953526043611117}",{'complaint_count': 0}
+O00168,Parcel,High,"{'pickup': 'Central', 'dropoff': 'Riverside'}","{'delivery_status': 'Delayed', 'customer_rating_post_delivery': 3.78, 'completion_hours_clean': 15.778133315}",{'complaint_count': 0}
