@@ -1,0 +1,21 @@
+"delivery_id","order_id","service_type","pickup_zone","hub_name","delivery_status","promised_window_hours","completion_hours","missed_promised_window","customer_rating_post_delivery"
+"DL00386","O00135","Passenger","Riverside","Central Core","Failed",24,43.4569181980556,1,3.35
+"DL00387","O00274","Passenger","North","North Exchange","Failed",24,42.1266387325,1,2.85
+"DL00033","O00885","Medical","Riverside","Airport Hub","Failed",24,40.8403336927778,1,4.13
+"DL00530","O00756","Retail","Airport","North Exchange","Failed",24,39.5657889613889,1,2.54
+"DL00026","O00906","Passenger","West","West Gate","Failed",24,38.5460643644444,1,2.23
+"DL00806","O00128","Medical","Airport","Riverside Hub","Delayed",24,37.6482457547222,1,2.68
+"DL00497","O00192","Retail","Central","Midtown Relay","Failed",24,37.2933806227778,1,3.23
+"DL00472","O00042","Retail","Riverside","North Exchange","Delayed",24,37.1008640605556,1,3.59
+"DL00775","O00153","Parcel","North","Central Core","Delayed",24,36.7322366583333,1,2.36
+"DL00068","O00828","Passenger","West","Midtown Relay","Failed",24,36.5436977372222,1,3.73
+"DL00763","O00837","Parcel","East","South Link","Failed",24,35.4301443519444,1,3.96
+"DL00658","O01123","Parcel","South","West Gate","Failed",24,34.8244081586111,1,4.41
+"DL00269","O00131","Retail","East","Airport Hub","Delayed",24,34.5195342722222,1,1.96
+"DL00007","O00097","Parcel","Airport","Riverside Hub","Delayed",24,33.9697424583333,1,4.64
+"DL00512","O00224","Parcel","North","Riverside Hub","Delayed",24,33.6749027541667,1,3.51
+"DL00359","O00654","Parcel","Central","North Exchange","Delayed",24,33.5989269655556,1,2.94
+"DL00893","O00981","Medical","Airport","Central Core","Delayed",24,33.0537581475,1,4.52
+"DL00732","O00748","Parcel","West","North Exchange","Failed",24,32.3593961480556,1,3.55
+"DL00684","O00986","Parcel","South","Midtown Relay","Delayed",24,31.9749165702778,1,3.71
+"DL00838","O00909","Business","North","East Dock","Failed",12,31.7175628708333,1,2.31
