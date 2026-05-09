@@ -1,0 +1,7 @@
+collection,documents_processed,documents_matched,documents_modified,documents_upserted,final_count
+customers,650,0,0,650,650
+drivers,170,0,0,170,170
+vehicles,120,0,0,120,120
+hubs,8,0,0,8,8
+app_events,640,0,0,640,640
+service_cases,1250,0,0,1250,1250
