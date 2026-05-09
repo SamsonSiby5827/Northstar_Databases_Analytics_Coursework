@@ -1,6 +1,0 @@
-"service_type","total_orders","delivery_records","delayed_count","failed_count","bad_outcome_pct","avg_order_value","avg_rating"
-"Business",165,165,28,25,32.12,92.25,3.85
-"Medical",139,139,22,16,27.34,87.14,3.84
-"Passenger",341,341,53,38,26.69,96.07,3.85
-"Retail",297,297,50,28,26.26,90.01,3.87
-"Parcel",308,308,49,25,24.03,87.62,3.9
