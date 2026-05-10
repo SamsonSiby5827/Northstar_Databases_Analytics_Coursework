@@ -1,0 +1,227 @@
+{
+  "explainVersion": "1",
+  "queryPlanner": {
+    "namespace": "NorthStarDB.service_cases",
+    "parsedQuery": {
+      "$and": [
+        {
+          "status_flags.is_bad_outcome": {
+            "$eq": true
+          }
+        },
+        {
+          "zones.pickup": {
+            "$eq": "Central"
+          }
+        }
+      ]
+    },
+    "indexFilterSet": false,
+    "queryHash": "B74C335E",
+    "planCacheShapeHash": "B74C335E",
+    "planCacheKey": "C96615DB",
+    "optimizationTimeMillis": 0,
+    "maxIndexedOrSolutionsReached": false,
+    "maxIndexedAndSolutionsReached": false,
+    "maxScansToExplodeReached": false,
+    "prunedSimilarIndexes": false,
+    "winningPlan": {
+      "isCached": false,
+      "stage": "LIMIT",
+      "limitAmount": 25,
+      "inputStage": {
+        "stage": "PROJECTION_DEFAULT",
+        "transformBy": {
+          "_id": 1,
+          "order_id": 1,
+          "zones.pickup": 1,
+          "analytics.completion_hours_clean": 1,
+          "analytics.customer_rating_post_delivery": 1,
+          "status_flags.is_bad_outcome": 1
+        },
+        "inputStage": {
+          "stage": "FETCH",
+          "inputStage": {
+            "stage": "IXSCAN",
+            "keyPattern": {
+              "zones.pickup": 1,
+              "status_flags.is_bad_outcome": 1,
+              "analytics.completion_hours_clean": -1
+            },
+            "indexName": "idx_zone_bad_completion",
+            "isMultiKey": false,
+            "multiKeyPaths": {
+              "zones.pickup": [],
+              "status_flags.is_bad_outcome": [],
+              "analytics.completion_hours_clean": []
+            },
+            "isUnique": false,
+            "isSparse": false,
+            "isPartial": false,
+            "indexVersion": 2,
+            "direction": "forward",
+            "indexBounds": {
+              "zones.pickup": [
+                "[\"Central\", \"Central\"]"
+              ],
+              "status_flags.is_bad_outcome": [
+                "[true, true]"
+              ],
+              "analytics.completion_hours_clean": [
+                "[MaxKey, MinKey]"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "rejectedPlans": []
+  },
+  "executionStats": {
+    "executionSuccess": true,
+    "nReturned": 25,
+    "executionTimeMillis": 1,
+    "totalKeysExamined": 25,
+    "totalDocsExamined": 25,
+    "executionStages": {
+      "isCached": false,
+      "stage": "LIMIT",
+      "nReturned": 25,
+      "executionTimeMillisEstimate": 1,
+      "works": 26,
+      "advanced": 25,
+      "needTime": 0,
+      "needYield": 0,
+      "saveState": 0,
+      "restoreState": 0,
+      "isEOF": 1,
+      "limitAmount": 25,
+      "inputStage": {
+        "stage": "PROJECTION_DEFAULT",
+        "nReturned": 25,
+        "executionTimeMillisEstimate": 1,
+        "works": 25,
+        "advanced": 25,
+        "needTime": 0,
+        "needYield": 0,
+        "saveState": 0,
+        "restoreState": 0,
+        "isEOF": 0,
+        "transformBy": {
+          "_id": 1,
+          "order_id": 1,
+          "zones.pickup": 1,
+          "analytics.completion_hours_clean": 1,
+          "analytics.customer_rating_post_delivery": 1,
+          "status_flags.is_bad_outcome": 1
+        },
+        "inputStage": {
+          "stage": "FETCH",
+          "nReturned": 25,
+          "executionTimeMillisEstimate": 1,
+          "works": 25,
+          "advanced": 25,
+          "needTime": 0,
+          "needYield": 0,
+          "saveState": 0,
+          "restoreState": 0,
+          "isEOF": 0,
+          "docsExamined": 25,
+          "alreadyHasObj": 0,
+          "inputStage": {
+            "stage": "IXSCAN",
+            "nReturned": 25,
+            "executionTimeMillisEstimate": 1,
+            "works": 25,
+            "advanced": 25,
+            "needTime": 0,
+            "needYield": 0,
+            "saveState": 0,
+            "restoreState": 0,
+            "isEOF": 0,
+            "keyPattern": {
+              "zones.pickup": 1,
+              "status_flags.is_bad_outcome": 1,
+              "analytics.completion_hours_clean": -1
+            },
+            "indexName": "idx_zone_bad_completion",
+            "isMultiKey": false,
+            "multiKeyPaths": {
+              "zones.pickup": [],
+              "status_flags.is_bad_outcome": [],
+              "analytics.completion_hours_clean": []
+            },
+            "isUnique": false,
+            "isSparse": false,
+            "isPartial": false,
+            "indexVersion": 2,
+            "direction": "forward",
+            "indexBounds": {
+              "zones.pickup": [
+                "[\"Central\", \"Central\"]"
+              ],
+              "status_flags.is_bad_outcome": [
+                "[true, true]"
+              ],
+              "analytics.completion_hours_clean": [
+                "[MaxKey, MinKey]"
+              ]
+            },
+            "keysExamined": 25,
+            "seeks": 1,
+            "dupsTested": 0,
+            "dupsDropped": 0
+          }
+        }
+      }
+    }
+  },
+  "queryShapeHash": "D8DE96A9CA5D1CCBF34B65A6AF6A5D425BD8FDF0FF15FB4FC1ED91BE1FBE9A01",
+  "command": {
+    "find": "service_cases",
+    "filter": {
+      "zones.pickup": "Central",
+      "status_flags.is_bad_outcome": true
+    },
+    "projection": {
+      "_id": 1,
+      "order_id": 1,
+      "zones.pickup": 1,
+      "analytics.completion_hours_clean": 1,
+      "analytics.customer_rating_post_delivery": 1,
+      "status_flags.is_bad_outcome": 1
+    },
+    "limit": 25,
+    "sort": {
+      "analytics.completion_hours_clean": -1
+    },
+    "$db": "NorthStarDB"
+  },
+  "serverInfo": {
+    "host": "ac-xg4kruj-shard-00-02.gbco7lz.mongodb.net",
+    "port": 27017,
+    "version": "8.0.23",
+    "gitVersion": "ccf0d81588377542f00eeecf1b1ffbc095b1eeff"
+  },
+  "serverParameters": {
+    "internalQueryFacetBufferSizeBytes": 104857600,
+    "internalQueryFacetMaxOutputDocSizeBytes": 104857600,
+    "internalLookupStageIntermediateDocumentMaxSizeBytes": 16793600,
+    "internalDocumentSourceGroupMaxMemoryBytes": 104857600,
+    "internalQueryMaxBlockingSortMemoryUsageBytes": 33554432,
+    "internalQueryProhibitBlockingMergeOnMongoS": 0,
+    "internalQueryMaxAddToSetBytes": 104857600,
+    "internalDocumentSourceSetWindowFieldsMaxMemoryBytes": 104857600,
+    "internalQueryFrameworkControl": "trySbeRestricted",
+    "internalQueryPlannerIgnoreIndexWithCollationForRegex": 1
+  },
+  "ok": 1.0,
+  "$clusterTime": {
+    "clusterTime": "Timestamp(1778429415, 27)",
+    "signature": {
+      "hash": "b'\\x80\\x92\\x85\\xceC\\xb4\\xf6\\xd8\\x0fy\\xd4\\x8aF\\xedS`\\xfa\\xa2\\xcc\\xa9'",
+      "keyId": 7584875033139347458
+    }
+  },
+  "operationTime": "Timestamp(1778429415, 27)"
+}

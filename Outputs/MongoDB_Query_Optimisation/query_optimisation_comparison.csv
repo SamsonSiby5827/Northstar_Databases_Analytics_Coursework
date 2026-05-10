@@ -1,0 +1,5 @@
+query_name,collection,total_docs_examined_before,total_docs_examined_after,docs_examined_reduction_pct,total_keys_examined_before,total_keys_examined_after,uses_index_before,uses_index_after,uses_collection_scan_before,uses_collection_scan_after,execution_time_ms_before,execution_time_ms_after,optimisation_result
+Central bad outcome cases,service_cases,1250,25,98.0,0,25,False,True,True,False,2,1,Improved with index
+Delay complaint service cases,service_cases,353,25,92.92,0,25,False,True,True,False,0,1,Improved with index
+Tracking gap cases,service_cases,124,25,79.84,0,25,False,True,True,False,0,1,Improved with index
+Delivery instruction update latency,app_events,640,25,96.09,0,25,False,True,True,False,0,1,Improved with index

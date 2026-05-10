@@ -1,0 +1,26 @@
+_id,order_id,service_type,complaints,analytics.customer_rating_post_delivery
+O00011,O00011,Parcel,"[{""complaint_type"": ""Delay"", ""severity"": ""Low""}]",
+O00073,O00073,Passenger,"[{""complaint_type"": ""Delay"", ""severity"": ""Medium""}]",2.29
+O00125,O00125,Retail,"[{""complaint_type"": ""Delay"", ""severity"": ""Medium""}, {""complaint_type"": ""Delay"", ""severity"": ""Low""}, {""complaint_type"": ""AppIssue"", ""severity"": ""Medium""}]",
+O00128,O00128,Medical,"[{""complaint_type"": ""Delay"", ""severity"": ""Medium""}]",2.68
+O00147,O00147,Retail,"[{""complaint_type"": ""Delay"", ""severity"": ""Medium""}]",4.34
+O00154,O00154,Business,"[{""complaint_type"": ""Delay"", ""severity"": ""Medium""}]",2.62
+O00163,O00163,Parcel,"[{""complaint_type"": ""Delay"", ""severity"": ""Medium""}]",
+O00166,O00166,Passenger,"[{""complaint_type"": ""Delay"", ""severity"": ""Medium""}]",4.06
+O00167,O00167,Medical,"[{""complaint_type"": ""Delay"", ""severity"": ""Low""}, {""complaint_type"": ""Delay"", ""severity"": ""Medium""}]",3.37
+O00169,O00169,Retail,"[{""complaint_type"": ""Delay"", ""severity"": ""Low""}]",4.31
+O00175,O00175,Business,"[{""complaint_type"": ""Delay"", ""severity"": ""Medium""}]",4.69
+O00190,O00190,Parcel,"[{""complaint_type"": ""Delay"", ""severity"": ""Low""}, {""complaint_type"": ""SupportExperience"", ""severity"": ""Medium""}]",3.68
+O00206,O00206,Parcel,"[{""complaint_type"": ""Delay"", ""severity"": ""Medium""}]",2.74
+O00216,O00216,Retail,"[{""complaint_type"": ""Delay"", ""severity"": ""Low""}]",
+O00268,O00268,Medical,"[{""complaint_type"": ""Delay"", ""severity"": ""High""}]",2.49
+O00270,O00270,Business,"[{""complaint_type"": ""MissedPickup"", ""severity"": ""Medium""}, {""complaint_type"": ""Delay"", ""severity"": ""Medium""}]",4.41
+O00282,O00282,Parcel,"[{""complaint_type"": ""Delay"", ""severity"": ""Medium""}]",
+O00290,O00290,Medical,"[{""complaint_type"": ""MissedPickup"", ""severity"": ""Low""}, {""complaint_type"": ""Delay"", ""severity"": ""Low""}]",
+O00300,O00300,Retail,"[{""complaint_type"": ""Delay"", ""severity"": ""High""}]",4.87
+O00309,O00309,Parcel,"[{""complaint_type"": ""Delay"", ""severity"": ""Medium""}]",
+O00326,O00326,Passenger,"[{""complaint_type"": ""Delay"", ""severity"": ""High""}]",2.51
+O00341,O00341,Retail,"[{""complaint_type"": ""Delay"", ""severity"": ""Medium""}]",
+O00348,O00348,Parcel,"[{""complaint_type"": ""Delay"", ""severity"": ""High""}]",2.89
+O00351,O00351,Parcel,"[{""complaint_type"": ""Delay"", ""severity"": ""Low""}, {""complaint_type"": ""SupportExperience"", ""severity"": ""Medium""}]",4.04
+O00353,O00353,Business,"[{""complaint_type"": ""Delay"", ""severity"": ""Medium""}]",

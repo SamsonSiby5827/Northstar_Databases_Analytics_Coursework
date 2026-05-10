@@ -1,0 +1,285 @@
+{
+  "explainVersion": "2",
+  "stages": [
+    {
+      "$cursor": {
+        "queryPlanner": {
+          "namespace": "NorthStarDB.service_cases",
+          "parsedQuery": {
+            "$and": [
+              {
+                "status_flags.is_bad_outcome": {
+                  "$eq": true
+                }
+              },
+              {
+                "zones.pickup": {
+                  "$eq": "Central"
+                }
+              }
+            ]
+          },
+          "indexFilterSet": false,
+          "queryHash": "16A52AED",
+          "planCacheShapeHash": "16A52AED",
+          "planCacheKey": "855C8459",
+          "optimizationTimeMillis": 0,
+          "maxIndexedOrSolutionsReached": false,
+          "maxIndexedAndSolutionsReached": false,
+          "maxScansToExplodeReached": false,
+          "prunedSimilarIndexes": false,
+          "winningPlan": {
+            "isCached": false,
+            "queryPlan": {
+              "stage": "GROUP",
+              "planNodeId": 3,
+              "inputStage": {
+                "stage": "COLLSCAN",
+                "planNodeId": 1,
+                "filter": {
+                  "$and": [
+                    {
+                      "status_flags.is_bad_outcome": {
+                        "$eq": true
+                      }
+                    },
+                    {
+                      "zones.pickup": {
+                        "$eq": "Central"
+                      }
+                    }
+                  ]
+                },
+                "direction": "forward"
+              }
+            },
+            "slotBasedPlan": {
+              "slots": "$$RESULT=s23 env: {  }",
+              "stages": "[3] project [s23 = newObj(\"_id\", s14, \"matching_bad_outcome_cases\", s20, \"avg_completion_hours\", s21, \"avg_rating\", s22)] \n[3] project [s20 = (convert ( s15, int32) ?: s15), s21 = \n    if (s17 == 0ll) \n    then null \n    else (doubleDoubleSumFinalize(s16) / s17) \n, s22 = \n    if (s19 == 0ll) \n    then null \n    else (doubleDoubleSumFinalize(s18) / s19) \n] \n[3] group [s14] [s15 = count(), s16 = aggDoubleDoubleSum(s7), s17 = sum(\n    if ((typeMatch(s7, 1088) ?: true) || !(isNumber(s7))) \n    then 0ll \n    else 1ll \n), s18 = aggDoubleDoubleSum(s8), s19 = sum(\n    if ((typeMatch(s8, 1088) ?: true) || !(isNumber(s8))) \n    then 0ll \n    else 1ll \n)] spillSlots[s9, s10, s11, s12, s13] mergingExprs[sum(s9), aggMergeDoubleDoubleSums(s10), sum(s11), aggMergeDoubleDoubleSums(s12), sum(s13)] \n[3] project [s14 = (s6 ?: null)] \n[3] project [s6 = traverseP(s2, lambda(l12.0) { getField(move(l12.0), \"pickup\") }, 1), s7 = traverseP(s1, lambda(l13.0) { getField(move(l13.0), \"completion_hours_clean\") }, 1), s8 = traverseP(s1, lambda(l14.0) { getField(move(l14.0), \"customer_rating_post_delivery\") }, 1)] \n[1] filter {(traverseF(s3, lambda(l5.0) { traverseF(getField(move(l5.0), \"is_bad_outcome\"), lambda(l6.0) { ((move(l6.0) == true) ?: false) }, false) }, false) && traverseF(s2, lambda(l7.0) { traverseF(getField(move(l7.0), \"pickup\"), lambda(l8.0) { ((move(l8.0) == \"Central\") ?: false) }, false) }, false))} \n[1] scan s4 s5 none none none none none none lowPriority [s1 = analytics, s2 = zones, s3 = status_flags] @\"5baf7b49-6355-40af-9a8a-efe0875c04a7\" true false "
+            }
+          },
+          "rejectedPlans": []
+        },
+        "executionStats": {
+          "executionSuccess": true,
+          "nReturned": 1,
+          "executionTimeMillis": 2,
+          "totalKeysExamined": 0,
+          "totalDocsExamined": 1250,
+          "executionStages": {
+            "stage": "project",
+            "planNodeId": 3,
+            "nReturned": 1,
+            "executionTimeMillisEstimate": 1,
+            "opens": 1,
+            "closes": 1,
+            "saveState": 1,
+            "restoreState": 1,
+            "isEOF": 1,
+            "projections": {
+              "23": "newObj(\"_id\", s14, \"matching_bad_outcome_cases\", s20, \"avg_completion_hours\", s21, \"avg_rating\", s22) "
+            },
+            "inputStage": {
+              "stage": "project",
+              "planNodeId": 3,
+              "nReturned": 1,
+              "executionTimeMillisEstimate": 1,
+              "opens": 1,
+              "closes": 1,
+              "saveState": 1,
+              "restoreState": 1,
+              "isEOF": 1,
+              "projections": {
+                "20": "(convert ( s15, int32) ?: s15) ",
+                "21": "\n    if (s17 == 0ll) \n    then null \n    else (doubleDoubleSumFinalize(s16) / s17) \n",
+                "22": "\n    if (s19 == 0ll) \n    then null \n    else (doubleDoubleSumFinalize(s18) / s19) \n"
+              },
+              "inputStage": {
+                "stage": "group",
+                "planNodeId": 3,
+                "nReturned": 1,
+                "executionTimeMillisEstimate": 1,
+                "opens": 1,
+                "closes": 1,
+                "saveState": 1,
+                "restoreState": 1,
+                "isEOF": 1,
+                "groupBySlots": [
+                  14
+                ],
+                "expressions": {
+                  "15": "count() ",
+                  "16": "aggDoubleDoubleSum(s7) ",
+                  "17": "sum(\n    if ((typeMatch(s7, 1088) ?: true) || !(isNumber(s7))) \n    then 0ll \n    else 1ll \n) ",
+                  "18": "aggDoubleDoubleSum(s8) ",
+                  "19": "sum(\n    if ((typeMatch(s8, 1088) ?: true) || !(isNumber(s8))) \n    then 0ll \n    else 1ll \n) ",
+                  "initExprs": {
+                    "15": null,
+                    "16": null,
+                    "17": null,
+                    "18": null,
+                    "19": null
+                  }
+                },
+                "mergingExprs": {
+                  "9": "sum(s9) ",
+                  "10": "aggMergeDoubleDoubleSums(s10) ",
+                  "11": "sum(s11) ",
+                  "12": "aggMergeDoubleDoubleSums(s12) ",
+                  "13": "sum(s13) "
+                },
+                "usedDisk": false,
+                "spills": 0,
+                "spilledBytes": 0,
+                "spilledRecords": 0,
+                "spilledDataStorageSize": 0,
+                "inputStage": {
+                  "stage": "project",
+                  "planNodeId": 3,
+                  "nReturned": 84,
+                  "executionTimeMillisEstimate": 1,
+                  "opens": 1,
+                  "closes": 1,
+                  "saveState": 1,
+                  "restoreState": 1,
+                  "isEOF": 1,
+                  "projections": {
+                    "14": "(s6 ?: null) "
+                  },
+                  "inputStage": {
+                    "stage": "project",
+                    "planNodeId": 3,
+                    "nReturned": 84,
+                    "executionTimeMillisEstimate": 1,
+                    "opens": 1,
+                    "closes": 1,
+                    "saveState": 1,
+                    "restoreState": 1,
+                    "isEOF": 1,
+                    "projections": {
+                      "6": "traverseP(s2, lambda(l12.0) { getField(move(l12.0), \"pickup\") }, 1) ",
+                      "7": "traverseP(s1, lambda(l13.0) { getField(move(l13.0), \"completion_hours_clean\") }, 1) ",
+                      "8": "traverseP(s1, lambda(l14.0) { getField(move(l14.0), \"customer_rating_post_delivery\") }, 1) "
+                    },
+                    "inputStage": {
+                      "stage": "filter",
+                      "planNodeId": 1,
+                      "nReturned": 84,
+                      "executionTimeMillisEstimate": 1,
+                      "opens": 1,
+                      "closes": 1,
+                      "saveState": 1,
+                      "restoreState": 1,
+                      "isEOF": 1,
+                      "numTested": 1250,
+                      "filter": "(traverseF(s3, lambda(l5.0) { traverseF(getField(move(l5.0), \"is_bad_outcome\"), lambda(l6.0) { ((move(l6.0) == true) ?: false) }, false) }, false) && traverseF(s2, lambda(l7.0) { traverseF(getField(move(l7.0), \"pickup\"), lambda(l8.0) { ((move(l8.0) == \"Central\") ?: false) }, false) }, false)) ",
+                      "inputStage": {
+                        "stage": "scan",
+                        "planNodeId": 1,
+                        "nReturned": 1250,
+                        "executionTimeMillisEstimate": 1,
+                        "opens": 1,
+                        "closes": 1,
+                        "saveState": 1,
+                        "restoreState": 1,
+                        "isEOF": 1,
+                        "numReads": 1250,
+                        "recordSlot": 4,
+                        "recordIdSlot": 5,
+                        "scanFieldNames": [
+                          "analytics",
+                          "zones",
+                          "status_flags"
+                        ],
+                        "scanFieldSlots": [
+                          1,
+                          2,
+                          3
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "nReturned": 1,
+      "executionTimeMillisEstimate": 1
+    },
+    {
+      "$sort": {
+        "sortKey": {
+          "matching_bad_outcome_cases": -1
+        }
+      },
+      "totalDataSizeSortedBytesEstimate": 381,
+      "usedDisk": false,
+      "spills": 0,
+      "spilledDataStorageSize": 0,
+      "nReturned": 1,
+      "executionTimeMillisEstimate": 1
+    }
+  ],
+  "queryShapeHash": "7BC6DE2872A867AE3DF4C6EFFD023E9D6DF536AD02AE2E954C405FD3F8DC4DD3",
+  "serverInfo": {
+    "host": "ac-xg4kruj-shard-00-02.gbco7lz.mongodb.net",
+    "port": 27017,
+    "version": "8.0.23",
+    "gitVersion": "ccf0d81588377542f00eeecf1b1ffbc095b1eeff"
+  },
+  "serverParameters": {
+    "internalQueryFacetBufferSizeBytes": 104857600,
+    "internalQueryFacetMaxOutputDocSizeBytes": 104857600,
+    "internalLookupStageIntermediateDocumentMaxSizeBytes": 16793600,
+    "internalDocumentSourceGroupMaxMemoryBytes": 104857600,
+    "internalQueryMaxBlockingSortMemoryUsageBytes": 33554432,
+    "internalQueryProhibitBlockingMergeOnMongoS": 0,
+    "internalQueryMaxAddToSetBytes": 104857600,
+    "internalDocumentSourceSetWindowFieldsMaxMemoryBytes": 104857600,
+    "internalQueryFrameworkControl": "trySbeRestricted",
+    "internalQueryPlannerIgnoreIndexWithCollationForRegex": 1
+  },
+  "command": {
+    "aggregate": "service_cases",
+    "pipeline": [
+      {
+        "$match": {
+          "zones.pickup": "Central",
+          "status_flags.is_bad_outcome": true
+        }
+      },
+      {
+        "$group": {
+          "_id": "$zones.pickup",
+          "matching_bad_outcome_cases": {
+            "$sum": 1
+          },
+          "avg_completion_hours": {
+            "$avg": "$analytics.completion_hours_clean"
+          },
+          "avg_rating": {
+            "$avg": "$analytics.customer_rating_post_delivery"
+          }
+        }
+      },
+      {
+        "$sort": {
+          "matching_bad_outcome_cases": -1
+        }
+      }
+    ],
+    "cursor": {},
+    "$db": "NorthStarDB"
+  },
+  "ok": 1.0,
+  "$clusterTime": {
+    "clusterTime": "Timestamp(1778429414, 4)",
+    "signature": {
+      "hash": "b\"{gyL/\\x17\\x84x'8,>\\xc4\\xfd9\\xd3i\\xb4A\\xf5\"",
+      "keyId": 7584875033139347458
+    }
+  },
+  "operationTime": "Timestamp(1778429414, 4)"
+}
