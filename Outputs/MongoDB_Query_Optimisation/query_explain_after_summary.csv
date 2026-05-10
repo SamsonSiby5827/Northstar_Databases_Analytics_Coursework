@@ -1,5 +1,0 @@
-query_name,collection,index_status,n_returned,total_docs_examined,total_keys_examined,execution_time_ms,uses_index,uses_collection_scan,plan_stages
-Central bad outcome cases,service_cases,after_index,25,25,25,1,True,False,"FETCH, IXSCAN, LIMIT, PROJECTION_DEFAULT"
-Delay complaint service cases,service_cases,after_index,25,25,25,1,True,False,"FETCH, IXSCAN, LIMIT, PROJECTION_DEFAULT"
-Tracking gap cases,service_cases,after_index,25,25,25,1,True,False,"FETCH, IXSCAN, LIMIT, PROJECTION_DEFAULT"
-Delivery instruction update latency,app_events,after_index,25,25,25,1,True,False,"FETCH, IXSCAN, LIMIT, PROJECTION_SIMPLE"
