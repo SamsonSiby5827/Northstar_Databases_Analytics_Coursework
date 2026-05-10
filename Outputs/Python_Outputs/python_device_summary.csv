@@ -1,4 +1,0 @@
-device_type,event_count,avg_latency_ms,success_rate_pct
-Android,315,464.9,93.3
-Web,92,474.68,93.5
-iOS,233,463.15,95.3

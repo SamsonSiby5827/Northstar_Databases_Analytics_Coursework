@@ -1,9 +1,0 @@
-,manual_route_override_count,route_distance_km,fuel_or_charge_cost,cost_per_km,completion_hours_clean,customer_rating_post_delivery,is_bad_outcome,order_value
-manual_route_override_count,1.0,0.2,0.1,-0.03,-0.02,-0.06,0.06,0.0
-route_distance_km,0.2,1.0,0.53,-0.5,0.02,0.02,0.02,0.04
-fuel_or_charge_cost,0.1,0.53,1.0,0.02,0.05,-0.07,0.05,-0.04
-cost_per_km,-0.03,-0.5,0.02,1.0,0.04,-0.09,0.05,-0.05
-completion_hours_clean,-0.02,0.02,0.05,0.04,1.0,-0.3,0.45,0.01
-customer_rating_post_delivery,-0.06,0.02,-0.07,-0.09,-0.3,1.0,-0.64,-0.0
-is_bad_outcome,0.06,0.02,0.05,0.05,0.45,-0.64,1.0,-0.04
-order_value,0.0,0.04,-0.04,-0.05,0.01,-0.0,-0.04,1.0
