@@ -1,5 +1,0 @@
-"delivery_status","records","mean_completion_hrs","median_completion_hrs","sd_completion_hrs","q25_completion_hrs","q75_completion_hrs","mean_cost_per_km","sd_cost_per_km","mean_rating","sd_rating","mean_overrides"
-"OnTime",616,7.36,4.39,7.11,2.58,10.08,1.22,1.12,4.28,0.53,0.92
-"",300,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-"Delayed",202,13.51,12.45,7.53,8.23,16.41,1.31,1.41,3.11,0.94,1.07
-"Failed",132,17.78,16.64,8.71,12.05,21.1,1.35,1.48,3.05,0.88,1.04
