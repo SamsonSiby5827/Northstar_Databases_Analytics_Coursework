@@ -1,8 +1,0 @@
-complaint_type,complaint_count,avg_resolution_days,total_compensation
-Delay,101,7.257425742574258,1696.84
-MissedPickup,64,7.640625,1423.4
-AppIssue,53,8.60377358490566,980.72
-DriverBehaviour,51,8.156862745098039,973.0600000000001
-SupportExperience,20,7.45,342.5
-Billing,16,7.75,381.94
-Damage,15,11.333333333333334,359.73
