@@ -1,0 +1,9 @@
+event_type,event_count,avg_latency_ms,median_latency_ms,success_rate_pct
+delivery_instruction_update,75,496.29,446.0,100.0
+chat_opened,88,478.33,416.5,100.0
+chat_escalated,38,478.13,411.0,50.0
+payment_retry,69,472.68,440.0,72.5
+track_order,138,460.71,427.0,100.0
+search_route,99,456.51,457.0,100.0
+eta_refresh,105,452.15,440.0,100.0
+cancel_attempt,28,417.14,414.0,100.0

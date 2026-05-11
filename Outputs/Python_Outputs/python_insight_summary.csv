@@ -1,0 +1,6 @@
+area,finding,value
+Correlation,customer_rating_post_delivery has the strongest relationship with bad outcome,-0.64
+Zone risk,Central has the highest composite operational risk score,0.868
+Service type,Business has the highest bad outcome rate,0.421
+App events,delivery_instruction_update has the highest average API latency,496.3
+Data completeness,Percentage of orders with no delivery record,24.0
