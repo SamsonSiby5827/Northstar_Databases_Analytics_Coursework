@@ -1,0 +1,11 @@
+_id,service_type,zones,delivery,complaints,analytics
+O00003,Passenger,"{'pickup': 'West', 'dropoff': 'Airport'}",{'delivery_status': 'Delayed'},"[{'complaint_type': 'AppIssue', 'severity': 'Medium'}]",{'complaint_count': 1}
+O00007,Business,"{'pickup': 'Central', 'dropoff': 'Airport'}",{'delivery_status': 'Delayed'},"[{'complaint_type': 'AppIssue', 'severity': 'High'}]",{'complaint_count': 1}
+O00087,Business,"{'pickup': 'South', 'dropoff': 'North'}",{'delivery_status': 'Delayed'},"[{'complaint_type': 'AppIssue', 'severity': 'Low'}]",{'complaint_count': 1}
+O00089,Medical,"{'pickup': 'South', 'dropoff': 'North'}",{'delivery_status': 'Failed'},"[{'complaint_type': 'AppIssue', 'severity': 'High'}]",{'complaint_count': 1}
+O00249,Business,"{'pickup': 'Central', 'dropoff': 'West'}",{'delivery_status': 'Delayed'},"[{'complaint_type': 'AppIssue', 'severity': 'High'}]",{'complaint_count': 1}
+O00430,Retail,"{'pickup': 'Central', 'dropoff': 'South'}",{'delivery_status': 'Failed'},"[{'complaint_type': 'AppIssue', 'severity': 'Medium'}]",{'complaint_count': 1}
+O00440,Passenger,"{'pickup': 'East', 'dropoff': 'East'}",{'delivery_status': 'Failed'},"[{'complaint_type': 'AppIssue', 'severity': 'Medium'}]",{'complaint_count': 1}
+O00445,Passenger,"{'pickup': 'South', 'dropoff': 'Riverside'}",{'delivery_status': 'Failed'},"[{'complaint_type': 'AppIssue', 'severity': 'Low'}]",{'complaint_count': 1}
+O00602,Passenger,"{'pickup': 'Central', 'dropoff': 'Airport'}",{'delivery_status': 'Delayed'},"[{'complaint_type': 'AppIssue', 'severity': 'Medium'}]",{'complaint_count': 1}
+O00741,Retail,"{'pickup': 'Airport', 'dropoff': 'North'}",{'delivery_status': 'Delayed'},"[{'complaint_type': 'AppIssue', 'severity': 'Medium'}]",{'complaint_count': 1}

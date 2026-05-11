@@ -1,0 +1,11 @@
+_id,service_type,priority_level,zones,delivery,analytics
+O00192,Retail,High,"{'pickup': 'Central', 'dropoff': 'North'}","{'delivery_status': 'Failed', 'customer_rating_post_delivery': 3.23, 'completion_hours_clean': 37.293380622777775}",{'complaint_count': 0}
+O00654,Parcel,High,"{'pickup': 'Central', 'dropoff': 'Airport'}","{'delivery_status': 'Delayed', 'customer_rating_post_delivery': 2.94, 'completion_hours_clean': 33.59892696555556}",{'complaint_count': 1}
+O00366,Business,High,"{'pickup': 'Central', 'dropoff': 'South'}","{'delivery_status': 'Delayed', 'customer_rating_post_delivery': 1.44, 'completion_hours_clean': 31.63792523}",{'complaint_count': 0}
+O00129,Retail,High,"{'pickup': 'Central', 'dropoff': 'North'}","{'delivery_status': 'Failed', 'customer_rating_post_delivery': 2.59, 'completion_hours_clean': 29.183911323611117}",{'complaint_count': 1}
+O00158,Business,High,"{'pickup': 'Central', 'dropoff': 'West'}","{'delivery_status': 'Failed', 'customer_rating_post_delivery': 2.77, 'completion_hours_clean': 28.953526043611117}",{'complaint_count': 0}
+O00547,Retail,High,"{'pickup': 'Central', 'dropoff': 'South'}","{'delivery_status': 'Delayed', 'customer_rating_post_delivery': 2.6, 'completion_hours_clean': 28.591152543611116}",{'complaint_count': 0}
+O00976,Medical,High,"{'pickup': 'Central', 'dropoff': 'East'}","{'delivery_status': 'Delayed', 'customer_rating_post_delivery': 2.64, 'completion_hours_clean': 27.19915935055556}",{'complaint_count': 0}
+O00794,Retail,Low,"{'pickup': 'Central', 'dropoff': 'Airport'}","{'delivery_status': 'Failed', 'customer_rating_post_delivery': 3.58, 'completion_hours_clean': 27.021503980555558}",{'complaint_count': 0}
+O01197,Retail,Medium,"{'pickup': 'Central', 'dropoff': 'Airport'}","{'delivery_status': 'Delayed', 'customer_rating_post_delivery': 1.97, 'completion_hours_clean': 26.998109755833333}",{'complaint_count': 0}
+O00458,Parcel,High,"{'pickup': 'Central', 'dropoff': 'East'}","{'delivery_status': 'Delayed', 'customer_rating_post_delivery': 3.8, 'completion_hours_clean': 26.202907273055555}",{'complaint_count': 1}
