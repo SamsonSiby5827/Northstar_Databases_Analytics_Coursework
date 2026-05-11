@@ -1,0 +1,7 @@
+collection,index_name,key
+service_cases,_id_,"{""_id"": 1}"
+service_cases,idx_zone_bad_completion,"{""zones.pickup"": 1, ""status_flags.is_bad_outcome"": 1, ""analytics.completion_hours_clean"": -1}"
+service_cases,idx_complaint_type,"{""status_flags.has_complaint"": 1, ""complaints.complaint_type"": 1}"
+service_cases,idx_tracking_gap,"{""status_flags.tracking_gap_flag"": 1}"
+app_events,_id_,"{""_id"": 1}"
+app_events,idx_app_event_latency,"{""event_type"": 1, ""api_latency_ms"": -1}"

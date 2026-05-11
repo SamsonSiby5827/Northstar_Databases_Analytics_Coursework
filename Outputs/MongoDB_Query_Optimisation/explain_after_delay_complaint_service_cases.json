@@ -1,0 +1,218 @@
+{
+  "explainVersion": "1",
+  "queryPlanner": {
+    "namespace": "NorthStarDB.service_cases",
+    "parsedQuery": {
+      "$and": [
+        {
+          "complaints.complaint_type": {
+            "$eq": "Delay"
+          }
+        },
+        {
+          "status_flags.has_complaint": {
+            "$eq": true
+          }
+        }
+      ]
+    },
+    "indexFilterSet": false,
+    "queryHash": "D811945D",
+    "planCacheShapeHash": "D811945D",
+    "planCacheKey": "93ACD361",
+    "optimizationTimeMillis": 0,
+    "maxIndexedOrSolutionsReached": false,
+    "maxIndexedAndSolutionsReached": false,
+    "maxScansToExplodeReached": false,
+    "prunedSimilarIndexes": false,
+    "winningPlan": {
+      "isCached": false,
+      "stage": "LIMIT",
+      "limitAmount": 25,
+      "inputStage": {
+        "stage": "PROJECTION_DEFAULT",
+        "transformBy": {
+          "_id": 1,
+          "order_id": 1,
+          "service_type": 1,
+          "complaints.complaint_type": 1,
+          "complaints.severity": 1,
+          "analytics.customer_rating_post_delivery": 1
+        },
+        "inputStage": {
+          "stage": "FETCH",
+          "inputStage": {
+            "stage": "IXSCAN",
+            "keyPattern": {
+              "status_flags.has_complaint": 1,
+              "complaints.complaint_type": 1
+            },
+            "indexName": "idx_complaint_type",
+            "isMultiKey": true,
+            "multiKeyPaths": {
+              "status_flags.has_complaint": [],
+              "complaints.complaint_type": [
+                "complaints"
+              ]
+            },
+            "isUnique": false,
+            "isSparse": false,
+            "isPartial": false,
+            "indexVersion": 2,
+            "direction": "forward",
+            "indexBounds": {
+              "status_flags.has_complaint": [
+                "[true, true]"
+              ],
+              "complaints.complaint_type": [
+                "[\"Delay\", \"Delay\"]"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "rejectedPlans": []
+  },
+  "executionStats": {
+    "executionSuccess": true,
+    "nReturned": 25,
+    "executionTimeMillis": 1,
+    "totalKeysExamined": 25,
+    "totalDocsExamined": 25,
+    "executionStages": {
+      "isCached": false,
+      "stage": "LIMIT",
+      "nReturned": 25,
+      "executionTimeMillisEstimate": 0,
+      "works": 26,
+      "advanced": 25,
+      "needTime": 0,
+      "needYield": 0,
+      "saveState": 0,
+      "restoreState": 0,
+      "isEOF": 1,
+      "limitAmount": 25,
+      "inputStage": {
+        "stage": "PROJECTION_DEFAULT",
+        "nReturned": 25,
+        "executionTimeMillisEstimate": 0,
+        "works": 25,
+        "advanced": 25,
+        "needTime": 0,
+        "needYield": 0,
+        "saveState": 0,
+        "restoreState": 0,
+        "isEOF": 0,
+        "transformBy": {
+          "_id": 1,
+          "order_id": 1,
+          "service_type": 1,
+          "complaints.complaint_type": 1,
+          "complaints.severity": 1,
+          "analytics.customer_rating_post_delivery": 1
+        },
+        "inputStage": {
+          "stage": "FETCH",
+          "nReturned": 25,
+          "executionTimeMillisEstimate": 0,
+          "works": 25,
+          "advanced": 25,
+          "needTime": 0,
+          "needYield": 0,
+          "saveState": 0,
+          "restoreState": 0,
+          "isEOF": 0,
+          "docsExamined": 25,
+          "alreadyHasObj": 0,
+          "inputStage": {
+            "stage": "IXSCAN",
+            "nReturned": 25,
+            "executionTimeMillisEstimate": 0,
+            "works": 25,
+            "advanced": 25,
+            "needTime": 0,
+            "needYield": 0,
+            "saveState": 0,
+            "restoreState": 0,
+            "isEOF": 0,
+            "keyPattern": {
+              "status_flags.has_complaint": 1,
+              "complaints.complaint_type": 1
+            },
+            "indexName": "idx_complaint_type",
+            "isMultiKey": true,
+            "multiKeyPaths": {
+              "status_flags.has_complaint": [],
+              "complaints.complaint_type": [
+                "complaints"
+              ]
+            },
+            "isUnique": false,
+            "isSparse": false,
+            "isPartial": false,
+            "indexVersion": 2,
+            "direction": "forward",
+            "indexBounds": {
+              "status_flags.has_complaint": [
+                "[true, true]"
+              ],
+              "complaints.complaint_type": [
+                "[\"Delay\", \"Delay\"]"
+              ]
+            },
+            "keysExamined": 25,
+            "seeks": 1,
+            "dupsTested": 25,
+            "dupsDropped": 0
+          }
+        }
+      }
+    }
+  },
+  "queryShapeHash": "0AAA3304076C4872DEF356070FE6A0E20FD9EE30F0063F17F0E27129B1AD3A0C",
+  "command": {
+    "find": "service_cases",
+    "filter": {
+      "status_flags.has_complaint": true,
+      "complaints.complaint_type": "Delay"
+    },
+    "projection": {
+      "_id": 1,
+      "order_id": 1,
+      "service_type": 1,
+      "complaints.complaint_type": 1,
+      "complaints.severity": 1,
+      "analytics.customer_rating_post_delivery": 1
+    },
+    "limit": 25,
+    "$db": "NorthStarDB"
+  },
+  "serverInfo": {
+    "host": "ac-xg4kruj-shard-00-02.gbco7lz.mongodb.net",
+    "port": 27017,
+    "version": "8.0.23",
+    "gitVersion": "ccf0d81588377542f00eeecf1b1ffbc095b1eeff"
+  },
+  "serverParameters": {
+    "internalQueryFacetBufferSizeBytes": 104857600,
+    "internalQueryFacetMaxOutputDocSizeBytes": 104857600,
+    "internalLookupStageIntermediateDocumentMaxSizeBytes": 16793600,
+    "internalDocumentSourceGroupMaxMemoryBytes": 104857600,
+    "internalQueryMaxBlockingSortMemoryUsageBytes": 33554432,
+    "internalQueryProhibitBlockingMergeOnMongoS": 0,
+    "internalQueryMaxAddToSetBytes": 104857600,
+    "internalDocumentSourceSetWindowFieldsMaxMemoryBytes": 104857600,
+    "internalQueryFrameworkControl": "trySbeRestricted",
+    "internalQueryPlannerIgnoreIndexWithCollationForRegex": 1
+  },
+  "ok": 1.0,
+  "$clusterTime": {
+    "clusterTime": "Timestamp(1778489704, 29)",
+    "signature": {
+      "hash": "b'\\xed\\x15\\xd8\\xb5^\\xdb\\x05\\xc8\\xea\\x92g\\xf7\\xd5$o~_\\xfff\\x89'",
+      "keyId": 7584875033139347458
+    }
+  },
+  "operationTime": "Timestamp(1778489704, 29)"
+}

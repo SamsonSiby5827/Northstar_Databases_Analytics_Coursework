@@ -1,0 +1,5 @@
+collection,index_name,purpose
+service_cases,idx_zone_bad_completion,"Supports filtering by pickup zone and bad outcome, with sorting by completion time."
+service_cases,idx_complaint_type,Supports searches for embedded complaint types inside service cases.
+service_cases,idx_tracking_gap,Supports fast retrieval of orders that have no linked delivery record.
+app_events,idx_app_event_latency,Supports filtering app events by event type and sorting by latency.

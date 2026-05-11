@@ -1,0 +1,5 @@
+query_name,collection,index_status,n_returned,total_docs_examined,total_keys_examined,execution_time_ms,uses_index,uses_collection_scan,plan_stages
+Central bad outcome cases,service_cases,before_index,84,1250,0,2,False,True,"COLLSCAN, PROJECTION_DEFAULT, SORT"
+Delay complaint service cases,service_cases,before_index,25,353,0,0,False,True,"COLLSCAN, LIMIT, PROJECTION_DEFAULT"
+Tracking gap cases,service_cases,before_index,25,124,0,0,False,True,"COLLSCAN, LIMIT, PROJECTION_DEFAULT"
+Delivery instruction update latency,app_events,before_index,75,640,0,0,False,True,"COLLSCAN, PROJECTION_SIMPLE, SORT"
